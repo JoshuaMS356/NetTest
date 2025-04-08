@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Function1",
+    "scriptFile": "FunctionApp1.dll",
+    "entryPoint": "FunctionApp1.Function1.Run",
+    "language": "dotnet-isolated",
+    "properties": {
+      "IsCodeless": false
+    },
+    "bindings": [
+      {
+        "name": "myTimer",
+        "direction": "In",
+        "type": "timerTrigger",
+        "schedule": "0 */1 * * * *",
+        "properties": {}
+      }
+    ]
+  },
+  {
+    "name": "Function2",
+    "scriptFile": "FunctionApp1.dll",
+    "entryPoint": "FunctionApp1.Function2.Run",
+    "language": "dotnet-isolated",
+    "properties": {
+      "IsCodeless": false
+    },
+    "bindings": [
+      {
+        "name": "myTimer",
+        "direction": "In",
+        "type": "timerTrigger",
+        "schedule": "0 */2 * * * *",
+        "properties": {}
+      }
+    ]
+  }
+]
